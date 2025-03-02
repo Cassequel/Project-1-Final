@@ -1,0 +1,483 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-family: "raleway";
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header a:hover {
+    text-decoration: none;
+}
+
+header {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:4rem;
+    background-color: #ffffff;
+    border: 2px solid black;
+    box-sizing: border-box;
+    position: sticky;
+    top:0;
+    z-index: 2;
+    background-color: white;
+
+}
+
+header h1 {
+    font-family: "shrikhand";
+    font-weight: 100;
+    color: rgb(60, 60, 60);
+    text-shadow: 2px 2px 0px #2176ff, /* First shadow */
+    3px 3px 0px whitesmoke, /* Second shadow (red) */
+    6px 6px 0px #297373;  /* Third shadow (blue) */;
+}
+
+nav {
+    display: flex;
+    border-bottom: 2px solid black;
+}
+
+.div-left {
+    display:flex;
+    justify-content: space-around;
+    width:30%;
+    position: relative;
+    margin-top: 10px;
+    border: 2px dashed blue;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+@media (max-width:800px){
+    .div-left {
+        margin-left:auto;
+        justify-content: space-around;
+        width:40%;
+        flex-wrap: wrap;
+    }
+}
+
+.div-right {
+    display:flex;
+    justify-content: space-around;
+    width:30%;
+    position: relative;
+    margin-left: auto;
+    margin-top: 10px;
+    border: 2px dashed rgb(255, 0, 0);
+    margin-right: 100px;
+    margin-bottom:10px;
+}
+
+@media (max-width:800px){
+    .div-right {
+        margin-right:auto;
+        justify-content: space-around;
+        width:30%;
+    }
+}
+
+.body-container {
+    width:90%;
+    border: 4px solid rgb(208, 0, 255);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 50px;
+}
+
+.image-container {
+    gap: 1rem;
+    position: relative;
+    width: 50%;
+    border: 2px solid blue;
+}
+
+.hoodie{  
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.hoodie img{
+    max-width: 50%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#hoodie-vid {
+    max-width: 50%;
+    box-sizing: border-box;
+    padding: 5px;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#hoodie-1 {
+    max-width: 100%;
+}
+
+.text-container {
+    width: 35%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid green;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    font-family: "shrikhand";
+    font-weight: lighter;
+    font-size:40px;
+    color: black;
+}
+
+
+
+.star-rating {
+    font-family: "raleway";
+    font-weight: bold;
+}
+
+
+.price {
+    font-family: "raleway";
+    margin: 5px 0px 5px 0px;
+}
+
+.purchase-info-bar {
+    font-family: "raleway";
+    font-weight: lighter;
+}
+
+.o-hoodie-section {
+    width: 100%;
+    display: flex;
+    border: 2px solid orange;
+    height: auto;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.262);
+    justify-content: space-between;
+
+}
+
+.o-hoodie-section img {
+    border-radius: 100%;
+    max-width: 25%;
+    height: auto;
+    object-fit: contain;
+    box-sizing: border-box;
+    flex-shrink: 1;
+}
+
+
+.o-hoodie-section img:hover {
+    border: 2px solid black;
+
+}
+
+.Fav-Bag-bar {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.fa-heart {
+    padding-right: 5px;
+
+}
+
+.bag-button {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #297373;
+    color: white;
+    border-radius: 8px;
+    height: 2rem;
+    }
+
+.bag-button:hover:hover {
+    background-color: #2973738d;
+}
+
+.buy-button {
+    width: calc(100%-10px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2176ff;
+    color: white;
+    border-radius: 8px;
+    height: 2rem;
+    margin: 0px 5px 0px 5px;
+    }
+
+.buy-button:hover:hover {
+    background-color: #2176ff9a;
+}
+
+ul{
+    list-style-type: disc;
+    padding-left: 30px;
+    display: block;
+}
+
+.description {
+    font-family: "raleway";
+    margin-top:20px;
+    line-height: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* modal stuff all chat*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    height: 500px;
+    max-width: 80%;
+    font-family: "raleway";
+}
+
+input[type="email"], input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #297373;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.close-btn {
+    background-color: #297373;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    font-size: 14px;
+}
+
+.form-container button{
+    margin: 10px;
+    background-color: #297373;
+    border: none;
+    color: white;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: #ff3333;
+}
+
+/* Display the modal when active */
+.modal.active {
+    display: flex;
+}
+
+#discount {
+    font-weight: bolder;
+}
+
+#underline {
+    text-decoration: underline;
+}
+
+.divider {
+    height: 1px;
+    background-color: black;
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.warning {
+    font-family: "raleway";
+    line-height: 25px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.svg-divider {
+    width:100%;
+    border: 2px solid #ffa500;
+    display: flex;
+    flex-wrap:wrap;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.svg-divider video {
+    width:  100%;
+    height: auto;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    border: 2px solid blue;
+}
+
+.svg-title-1 {
+    position:absolute;
+    display:flex;
+    left:0;
+    font-family: "shrikhand";
+    font-size:70px;
+    margin-left: 10px;
+    line-height:80px;
+    text-align: center;
+    color: white;
+    flex-wrap:wrap;
+    border: 2px solid red;
+    box-sizing: border-box;
+    width: calc(100%-10px);
+}
+
+
+.svg-box {
+    position:absolute;
+    box-sizing: border-box;
+    display:flex;
+    bottom:0;
+    height: auto;
+    margin: 10px 10px 0px 10px;
+    font-family: "raleway";
+    color: white;
+    flex-wrap:wrap;
+    border: 2px solid black;
+    box-sizing: border-box;
+    width: 45%;
+}
+.svg-box-2 {
+    position:absolute;
+    box-sizing: border-box;
+    bottom:0;
+    right: 0;
+    font-size: 20px;
+    background-color: rgba(18, 97, 121, 0.59);
+    padding: 5px;
+    border-radius: 10px;
+    height: auto;
+    font-family: "raleway";
+    color: white;
+    flex-wrap:wrap;
+    width: 50%;
+}
+
+@media (min-width:800px){
+    .svg-title-1 {
+        font-size: 100px;
+        line-height: 150px;
+        margin-top:30px;
+    }
+}
+
+@media (min-width:800px){
+    .svg-title-2 {
+        font-size: 100px;
+        line-height: 150px;
+        margin-bottom:20px;
+    }
+}
+
+
+footer {
+    width:100%;
+    background-color: rgb(59, 59, 59);
+    height: 10rem;
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position:relative;
+    box-sizing: border-box;
+}
+
+#top-button {
+    box-sizing: border-box;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    border: 2px solid red;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the text */
+    left: 50%;
+    margin-left: -60px; /* Offset the tooltip to be centered */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Show tooltip text when hovering over the container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

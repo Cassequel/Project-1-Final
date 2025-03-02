@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&family=Press+Start+2P&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2532d9d973.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <h1 id="title">Handripped</h1>
+        </a>
+    </header>
+    <nav id="top">
+        <div class="div-left">
+            <a href="#">Shop</a>
+            <a href="#">Collections</a>
+            <a href="#">About</a>
+        </div>
+        <div class="div-right">
+            
+            <a href="modal.html">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+        </div>
+    </nav>
+    <section class="body-container">
+        <section class="image-container">
+            <div class="hoodie">
+                <img id="hoodie-1" src="./Hoodie/hoodie-1.JPG" alt="">
+                <img src="./Hoodie/hoodie-2.JPG" alt="">
+                <img src="./Hoodie/hoodie-3.JPG" alt="">
+                <img src="./Hoodie/hoodie-5.JPG" alt="">
+                <video id="hoodie-vid" autoplay loop>
+                    <source src="./hoodie-gif.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section class="text-container">
+            <div class="product-title">
+                Custom Made Patchwork Hoodie
+            </div>
+            <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>4.5
+            </div>
+            <div class="price">$150.00 USD</div>
+            <div class="purchase-info-bar">Tax included. Shipping calculated at checkout.</div>
+            <div class="o-hoodie-section">
+                <img src="./O-Hoodie/blue-hoodie.JPG" alt="">
+                
+                <img src="./O-Hoodie/red-hoodie.JPG" alt="">
+                <img src="./O-Hoodie/white-hoodie.JPG" alt="">
+                <img src="./O-Hoodie/winnite-hoodie.JPG" alt="">
+            </div>
+
+            <div class="Fav-Bag-bar">
+                <a href="#" alt="Add to Favorites"><i class="fa-regular fa-heart"></i></a>
+                <a href="#" class="bag-button">Add to Bag</a>
+            </div>
+            <a href="#" class="buy-button">Buy Now</a>
+            <div class="description">
+                Measurements
+                <ul>Size: XXl</ul>
+                <ul>Pit to Pit: 28 inch / 71cm</ul>
+                <ul>Top to Bottom: 28 inch / 71cm</ul>
+                <ul>Sleeves Length: 22.5 inch / 58cm</ul>
+            </div>        
+            <div class="divider"></div>
+            <div class="warning">
+                Please note that all items are hand made/reworked out of second hand fabrics. Minor wear and tear is to be expected. The size tag might not always be accurate therefore always check the measurements before purchasing to make sure the item is going to fit you. 
+            </div>
+        </section>
+    </section>
+    <section class="svg-divider">
+        <video src="waves.mp4" loop muted autoplay></video>
+        <div class=svg-title-1>
+            Don't Miss Our Next Big Drop
+        </div>
+        <div class="svg-box">
+            <form action="/submit" method="POST">
+                <label for="name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>  
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <button>Submit</button>
+            </form>
+        </div>
+        <div class="svg-box-2">
+            <div class="under-text">By submitting your email, you agree to opt-in to marketing communications. You are also agreeing to  <span id="underline">Privacy Policy</span></div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-section">
+            <a id="top-button" href="#top">
+                Go back to top
+            </a>
+        </div>
+    </footer>
+
+    <!--Modal Stuff the form-container and script was chat-->
+    <div class="modal">
+        <div class="modal-content">
+            <button class="close-btn">Close</button>
+            <h2>Don't Miss A Beat</h2>
+            <p>Subscribe to our email list and get <span id="discount">20% off</span> your first order</p>
+            <div class="form-container">
+                <form action="/submit" method="POST">
+                    <label for="name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>    
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <button>Submit</button>
+                </form>
+            </div>
+            <div class="under-text">By submitting your email, you agree to opt-in to marketing communications. You are also agreeing to  <span id="underline">Privacy Policy</span></div>
+        </div>
+    </div>
+
+    <script>
+        // Get elements
+        const modal = document.querySelector('.modal');
+        const openModalBtn = document.querySelector('.open-modal-btn');
+        const closeModalBtn = document.querySelector('.close-btn');
+
+        // Open modal function
+        const openModal = () => {
+            modal.classList.add('active');
+        };
+
+        // Close modal function
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // Close modal if clicking outside of the modal content
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        // Open the modal automatically after 3 seconds
+        setTimeout(openModal, 3000); // 3000 ms = 3 seconds
+    </script>
+</body>
+</html>
